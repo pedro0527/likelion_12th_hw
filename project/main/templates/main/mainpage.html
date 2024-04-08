@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div>
+<img src="{% static 'images/DG.png' %}" alt="logo" width="100px">
+<h1 class="contents">{{text}}</h1>
+<div class="contents">Django MTV</div>
+<div>🦁Django MTV 패턴</div>
+<ul>
+{% for pattern in patterns %}
+    <li>{{pattern}}</li>
+    {% endfor %}
+</ul>
+</div>
+<div>🦁추가 설명</div>
+<ul>
+<li>Request : {{info.1}} </li>
+<li>URL Conf : {{info.2}} </li>
+<li>View : {{info.3}} </li>
+<li>Model : {{info.4}} </li>
+<li>Template : {{info.5}} </li>
+</ul>
+</body>
+</html>
+
+{% endblock %}
